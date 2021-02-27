@@ -425,14 +425,14 @@ class LogParser(object):
                         self.game.rcon_bigtext("^7%s" % line.split('@bigtext')[-1].strip())
 
 ##Random slap START
-		    elif "@randomslap" in line:
-			player_list = [player for player in self.game.players.itervalues() if player.get_team() == 1 or player.get_team()==2 and not player.get_team_lock() and player.get_alive()]
-			victima=random.choice(player_list)
-			self.game.send_rcon("slap %d" % victima.get_player_num())
-			self.game.rcon_say("^1Slap winner is: %s" % victima.get_name())
-			self.game.rcon_say("^2Slap winner is: %s" % victima.get_name())
-			self.game.rcon_say("^3Slap winner is: %s" % victima.get_name())
-			self.game.rcon_say("^5Slap winner is: %s" % victima.get_name())
+		            elif "@randomslap" in line:
+			        player_list = [player for player in self.game.players.itervalues() if player.get_team() == 1 or player.get_team()==2 and not player.get_team_lock() and player.get_alive()]
+			        victima=random.choice(player_list)
+			        self.game.send_rcon("slap %d" % victima.get_player_num())
+			        self.game.rcon_say("^1Slap winner is: %s" % victima.get_name())
+			        self.game.rcon_say("^2Slap winner is: %s" % victima.get_name())
+			        self.game.rcon_say("^3Slap winner is: %s" % victima.get_name())
+			        self.game.rcon_say("^5Slap winner is: %s" % victima.get_name())
 ##Random slap END
 
                     else:
