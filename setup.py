@@ -14,7 +14,7 @@ except ImportError:
 if sys.version_info < (2, 6):
     raise NotImplementedError('Sorry, you need at least Python 2.6.')
 
-metadata = dict(re.findall("__([a-z]+)__ = '([^']+)'", open('spunky.py').read()))
+metadata = dict(re.findall("__([a-z]+)__ = '([^']+)'", open('stinky.py').read()))
 
 long_description = """Overview
 ========
